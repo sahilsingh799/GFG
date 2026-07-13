@@ -94,6 +94,46 @@ int main() {
     
     
 }
+//Binary Tree
+#include <bits/stdc++.h>
+using namespace std;
+class Tree{
+public:
+    int val;
+    Tree*l;
+    Tree*r;
+    Tree(int val){
+        this->val=val;
+        l=NULL;
+        r=NULL;
+    }
+    
+};
+
+
+int main() {
+    Tree* root= new Tree(5);
+    root->l=new Tree(7);
+    root->l->l=new Tree(3);
+    root->l->l->l=new Tree(13);
+    
+    root->r=new Tree(17);
+    root->r->l=new Tree(6);
+    root->r->l->l=new Tree(13);
+    root->r->r->=new Tree(20);
+    root->r->r->l=new Tree(13);
+    
+    
+    
+    
+    
+    
+}
+    				
+    				
+    				
+    				
+
     				
     				
     				

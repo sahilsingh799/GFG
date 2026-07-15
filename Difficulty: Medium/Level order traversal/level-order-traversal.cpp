@@ -19,14 +19,14 @@ class Solution {
     vector<int> levelOrder(Node *root) {
         // code here
         vector<int>ans;
+        if(root==nullptr)return ans;
         queue<Node*>q;
-        
         q.push(root);
         while(!q.empty()){
-            Node* f=q.front();
+            auto f=q.front();
             q.pop();
-            if(f->left!=NULL)q.push(f->left);
-            if(f->right!=NULL)q.push(f->right);
+            if(f->left)q.push(f->left);
+            if(f->right)q.push(f->right);
             
             ans.push_back(f->data);
             

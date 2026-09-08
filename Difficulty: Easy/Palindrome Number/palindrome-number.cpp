@@ -1,20 +1,23 @@
 class Solution {
   public:
     bool isPalindrome(int n) {
-       // if(n<0)return false;
-        // code here
-        string s=to_string(abs(n));
-        int i=0;
-        int j=s.size()-1;
-        //if(n<0)return false;
-        while(i<j){
-            //if(s<0)return false;
-            if(s[i]!=s[j]){
-                return false;
-            }
-            i++;
-            j--;
-        }
-        return true;
+      string s=to_string(n);
+      int r=0;
+      int l=s.size()-1;
+      while(r<l){
+          if(s[r]=='-'){
+              r++;
+              continue;
+          }
+          if(s[l]=='-'){
+              l--;
+              continue;
+          }if(s[r]!=s[l]) {
+              return false;
+          }
+          r++;
+          l--;
+      }
+      return true;
     }
 };
